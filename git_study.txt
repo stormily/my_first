@@ -1,6 +1,37 @@
-关于将git的文件提交
+关于git的文件提交
 1.$ git status (显示有变更的文件)
-2.$ git add . (添加当前目录的所有文件到暂存区)
+2.$ git add  (添加当前目录的所有文件到暂存区)
 3.$ git commit -m"注释内容" (提交暂存区到仓库区)
 4.$ git push  (把当前分支master推送到远程)
 [注：只是最简易的提交，详细再补充。]
+
+关于git的文件修改
+$ git status 显示文件是否修改 (若输入后显示working directory clean则说明当前无需要的提交，工作目录很干净)
+$ git diff   显示文件的具体修改内容
+
+关于git的文件修改版本查看
+$ git log 可以查看文件修改的历史记录
+[会显示commit Author Date 三项内容以及修改]
+(commit id:一长串数字为版本号)
+
+关于git的文件版本回退
+$ git reset  (--hard HEAD^)
+[HEAD : 当前版本，最新的提交
+ HEAD^: 上一个版本
+ HEAD^^:上上一个版本
+ HEAD~**:往上**个版本 ]
+如果不小心回退到过早版本，可以通过版本id进行恢复到“未来”版本
+当新版本id找不到时，
+$ git reflog (记录每一次命令，命令历史)
+
+
+
+
+
+
+关于git命令涉及到的单词涵义：
+status:状态
+commit:提交
+log   :日志
+reset :复位
+reflog:引用日志
