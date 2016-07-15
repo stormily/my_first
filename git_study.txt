@@ -24,6 +24,9 @@ $ git reset  (--hard HEAD^)
 当新版本id找不到时，
 $ git reflog (记录每一次命令，命令历史)
 
+关于git的远程仓库的建立
+# 增加一个新的远程仓库，并命名
+$ git remote add [shortname] [url]  (注：shortname自己命名 url 远程git对应网址)
 
 
 
