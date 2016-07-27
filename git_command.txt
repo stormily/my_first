@@ -45,6 +45,7 @@ $ git branch -d [branch-name] (删除本地分支)
 $ git push origin :[branch-name] (删除远程分支，原理是推送一个空覆盖掉远程分支)
 $ git merge [branch-name](合并某分支到当前分支)
 $ ls (查看当前目录下的文件 linux命令)
+共同基准点
 
 关于git远程文件下载到本地
 $ git pull  下载远程对应分支到本地
@@ -66,3 +67,4 @@ reflog  :引用日志   // reference log
 remote  :远程
 view    :查看
 upstream:上游
+merge   :合并；使合并；
