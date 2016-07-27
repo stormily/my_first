@@ -36,7 +36,7 @@ $ git remote show origin 查看远程主机origin所有信息
 关于git分支的切换
 $ git branch    (列出本地所有分支)
 $ git branch -r (列出远程所有分支)
-$ git checkout -b [branch-name] (新建分支)
+$ git checkout -b [branch-name] (新建分支)   (相当于 $ git branch dev    $git checkout dev)
 $ git push -u origin [branch-name] (将新建分支推送至远程)
 $ git branch -vv (查看本地所有分支 和 其关联的上游分支)
 $ git checkout - (切换至上一分支)
