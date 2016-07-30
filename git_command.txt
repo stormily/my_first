@@ -1,3 +1,19 @@
+Skip to content
+This repository
+Search
+Pull requests
+Issues
+Gist
+ @stormily
+ Unwatch 1
+  Star 0
+  Fork 0 stormily/my_first
+ Code  Issues 0  Pull requests 0  Wiki  Pulse  Graphs  Settings
+Branch: two Find file Copy pathmy_first/git_command.txt
+a08e4a9  9 minutes ago
+@stormily stormily rebase
+1 contributor
+RawBlameHistory     114 lines (92 sloc)  5.46 KB
 关于git的文件提交
 $ git status (显示有变更的文件)
 $ git add . (添加当前目录的所有文件到暂存区) // . 表示当前目录 .. 表示上一级目录
@@ -62,20 +78,40 @@ $git merge 用于合并指定分支到当前分支
 
 关于三路合并：如果没有冲突，则可以直接简单合并；
               如果发生冲突，则可以使用git diff 命令查看，在对冲突进行编辑后，解决后可直接提交
+              任何包含未解决冲突的文件都会以未合并（unmerged）的状态列出
+              ======= 隔开的上半部分，是 HEAD (master分支，运行merge命令时切换到的分支)
+                            下半部分，是 new_branch 中的内容
+              修改时须修改分支内容，避免冲突，同时删除 <<<<<<<，======= 和 >>>>>>>
+$ git mergetool:调用一个可视化的合并工具引导解决冲突
+最后再次使用 $ git status 确保所有冲突已解决
+
+$ git rebase 该命令则是把整个[new_branch]移动至master分支后面，有效并入提交
+
+
 $ gitk 显示项目的历史  
+$ git log --graph --pretty=oneline --abbrev-commit 查看分支历史
+
+当在某一分支下修改文件而未push时切换分支会出现错误提示：
+error: Your local changes to the following files would be overwritten by checkout
+Please,commit your changes or stash them before you can switch branches Aborting
+即选择提交至暂存区或者保留工作现场
 
 
 
+merge rebase命令的优缺点：
+merge是一个安全的操作，现有分支不会被更改
+另一方面，这同样意味着每次合并上游更改时feature分支都会引入一个外来的合并提交。
+如果master非常活跃的话，这或多或少会污染你的分支历史。虽然运用git log 选项可以减轻这个问题，会增加理解项目历史的难度；
 
+rebase它会把整个feature分支移动到master分支的后面，有效把所有master分支上新的提交并入过来。同时，它为原分支上每一个提交创建一个新的提交，重写了项目历史，并且不会带来合并提交。
+rebase最大优势： 项目历史整洁 
+不存在merge引入的非必要的合并提交，同时rebase会使项目历史呈现线性，从头至尾浏览不需要fork，查看项目历史更加便捷。
+rebase最大劣势：简单的提交历史会影响 安全性和可跟踪性。
+此外。rebase 不会有合并提交中附带的信息，无法查看分支中并入了上游的哪些修改。
+分支管理策略：
+master 分支为稳定分支，平时修改应在其他分支 
 
-
-
-
-
-
-
-
-
+bug分支 feature分支
 
 
 ------------------------
@@ -90,3 +126,5 @@ view    :查看
 upstream:上游
 merge   :合并；使合并；
 rebase  :复位基底
+checkout:检出；检测；检验
+fork    :分歧；分叉
