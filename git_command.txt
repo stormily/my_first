@@ -57,6 +57,25 @@ eg.:  git push --help
 关于分支的merge
 //TO-DO
 
+关于分支merge 与 rebase的应用
+$git merge 用于合并指定分支到当前分支
+单线的简单分支在合并时会出现“Fast forward”提示，这种合并进程称为快进，没有需要解决的分歧
+
+关于三路合并：如果没有冲突，则可以直接简单合并；
+              如果发生冲突，则可以使用git diff 命令查看，在对冲突进行编辑后，解决后可直接提交
+$ gitk 显示项目的历史  
+
+
+
+
+
+
+
+
+
+
+
+
 ------------------------
 [vocabulary]
 status  :状态
@@ -68,3 +87,4 @@ remote  :远程
 view    :查看
 upstream:上游
 merge   :合并；使合并；
+rebase  :复位基底
