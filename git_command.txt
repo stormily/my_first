@@ -102,6 +102,12 @@ bug分支 feature分支
 除过在Git Bash 内查看外，同样可以使用 everything 查找help
 help包括：add, commit, push, pull, fetch, checkout, branch, merge, rebase, reset, log [本地自带]
 
+关于工作区，暂存区(Stage)，远程库，本地库，版本库
+工作区：电脑里可以看到的目录
+版本库：工作区中的一个隐藏目录 .git ，暂存区即属于版本库
+文件添加入Git版本库时分为两步： 
+git add    添加文件，此时是把文件修改添加至暂存区；
+git commit 提交更改，把暂存区内容提交到当前分支
 
 
 
