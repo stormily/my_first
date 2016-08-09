@@ -1,13 +1,19 @@
 <script type="text/javascript">
-var arr=[];
-arr.length = 6
-var a = 0
+var a=[];
+var b=[]
  for (var i = 1 ; i <= 1000 ; i++){
  	if( i % 105 === 0){
- 		arr[a] = i
- 		console.log(arr)
- 	};
- 
-}
+ 		if(i <= 630){
+ 				a.push(i)
+ 			}else {
+ 				b.push(i)
+ 			}
 
+ 
+ 	
+ 	};
+
+}
+ 	console.log(a)
+ 	console.log(b)
 </script>
