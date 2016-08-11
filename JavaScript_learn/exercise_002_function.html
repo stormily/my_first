@@ -1,17 +1,15 @@
 <script type="text/javascript">
 var output = new Array(6);                           // 定义长度为6的数组
 for (var i = 1, j = 0; i < 10000; i++) {             // for循环设定条件
-	if ( i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {   // if设置余数
-		output [j++] = i;                            
-		if (j == 6) {
-			console.log(output);
-			j = 0;
-		}
-	}
+    if ( i % 3 == 0 && i % 5 == 0 && i % 7 == 0) {   // if设置余数
+        output [j++] = i;
+        if (j == 6) {
+            console.log(output);
+            j = 0;
+        }
+    }
 }
 if (j != 0) {
-	console.log(output.slice(0,j))
+    console.log(output.slice(0,j))
 }
-
-
 </script>
