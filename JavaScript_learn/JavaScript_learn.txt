@@ -1,0 +1,47 @@
+JavaScript涉及知识点：
+
+
+数据类型;
+1、概述
+数值（number）：整数和小数（比如1和3.14）
+字符串（string）：字符组成的文本（比如”Hello World”）
+布尔值（boolean）：true（真）和false（假）两个特定值
+undefined：表示“未定义”或不存在，即此处目前没有任何值
+null：表示空缺，即此处应该有一个值，但目前为空
+对象（object）：各种值组成的集合
+
+对象分为3个子类型：
+狭义的对象（object）
+数组（array）
+函数（function）
+
+2、typeof运算符
+
+三种确定一个值为什么类型的方法：
+typeof运算符
+instanceof运算符
+Object.prototype.toString方法
+
+typeof运算符可以返回一个值的数据类型，可能有以下结果。
+（1）原始类型
+数值、字符串、布尔值分别返回number、string、boolean。
+（2）函数
+函数返回function。
+（3）undefined
+undefined返回undefined。
+（4）其他
+除此以外，其他情况都返回object。
+
+typeof对数组（array）和对象（object）的显示结果都是object，可以通过 instanceof 运算符区分
+
+
+
+单词：
+operate   :操作
+calculate :计算
+quit      :退出
+cellpadding：单元格边距
+cellspacing：单元格间距
+align      ：对齐
+colspan    ：栏宽
+readonly   : 只读的
