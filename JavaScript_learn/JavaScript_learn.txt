@@ -45,3 +45,4 @@ cellspacing：单元格间距
 align      ：对齐
 colspan    ：栏宽
 readonly   : 只读的
+digital    : 数字
