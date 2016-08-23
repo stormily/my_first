@@ -22,15 +22,30 @@ vertical-align:middle;
     var calculate = 0;  //calculte :计算
     var equalKey = false
 
-function connectionDigital(control)
+function connectionDigital(control) //定义html中type类型
 {
   var txt = document.getElementById('txtScream');
   if(equalKey){
-    txt.value = "";
-    equalKey = false
+    txt.value = "";          //输入框空白
+    equalKey = false;
   }
-}
+  if(txt.value.indexOf('.') > -1 && control.value == '.')
+    return false;
+  txt.value += control.value;
+}       //数字键输入完成
 
+function backspace()
+{
+  var txt = document.getElementById('txtScream');
+  txt.value = txt.value.substring(0,txt.value.length - 1);
+}                //定义退格
+
+function clearAll()
+{
+  document.getElementById('txtScream').value = "";
+  result = "";
+  operator = "";
+}                //定义归零
 
 
   </script>
