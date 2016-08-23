@@ -48,6 +48,38 @@ function clearAll()
 }                //定义归零
 
 
+
+
+function calculation(control)
+{
+  operator = control.value;
+  var txt = document.getElementById('txtScream');
+  if(txt.value == "")return false;
+  result = txt.value;
+  txt.value = "";
+}               //定义运算符号
+
+
+function getResult()
+{
+  var sourseValue = parseFloat(result);
+  var txt = document.getElementById('txtScream');
+  if(operator == '*')
+  opValue = sourseValue * parseFloat(txt.value);
+else if (operator == '/')
+  opValue = sourseValue / parseFloat(txt.value);
+else if (operator == '+')
+  opValue = sourseValue + parseFloat(txt.value);
+else if (operator == '-')
+  opValue = sourseValue - parseFloat(txt.value);
+
+txt.value = opValue
+equalKey = true;
+result = "";
+opValue = "";
+}
+
+
   </script>
 
 
